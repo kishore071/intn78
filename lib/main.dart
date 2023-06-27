@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:intern78/Componenets/copy.dart';
 import 'package:intern78/Decorator/MyWidget.dart';
+import 'package:intern78/singlepage/AdditionalPage.dart';
+import 'package:intern78/singlepage/FilePicker.dart';
 import 'package:intern78/singlepage/First.dart';
 import 'package:intern78/singlepage/Second.dart';
-import 'package:intern78/singlepage/pagea.dart';
-import 'singlepage/FilePicker.dart';
+
+import 'singlepage/ProjectAndIntern.dart';
+
 //import 'package:intern78/singlepage/Third.dart';
 
 void main() {
@@ -22,6 +26,11 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) =>const First(),
         '/laf': (context) => Second(),
+        '/edudeta':(context)=>const MyWidget(),
+        '/projandint':(context)=>const ProjectAndIntern(),
+        '/workexp':(context)=>const SecondPage(),
+        '/profdoc':(context)=>const FilesPivckers(),
+        '/adddetails':(context)=>const AdditionalPage(),
       },
     );
   }

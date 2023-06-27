@@ -370,6 +370,11 @@ class _FirstState extends State<First> {
                     // }
                   });
                 }, child: field('Save&Continue'))),
+          ElevatedButton(onPressed: (){
+            setState(() {
+              Navigator.pushReplacementNamed(context, '/edudeta');
+            });
+          }, child: field('Switch'))
           ],
         ),
       ),

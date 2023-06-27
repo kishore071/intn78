@@ -11,13 +11,10 @@ class StepFirste extends StatefulWidget {
 }
 
 class _StepFirsteState extends State<StepFirste> {
-  @override
   TextEditingController dateinput = TextEditingController();
   bool _value = false;
   late String errordetails = "";
-  int year = DateTime
-      .now()
-      .year;
+  int year = DateTime.now().year;
   late final TextEditingController _lastname = TextEditingController();
   late TextEditingController emailed = TextEditingController();
   late TextEditingController _regno = TextEditingController();
@@ -29,7 +26,7 @@ class _StepFirsteState extends State<StepFirste> {
   late TextEditingController _temp = TextEditingController();
   late TextEditingController _temp1 = TextEditingController();
   late TextEditingController _pincode = TextEditingController();
-  late TextEditingController _pincode1 = TextEditingController();
+  late final TextEditingController _pincode1 = TextEditingController();
   late String pwd = '';
   late String email = '';
   final listitem = [
@@ -322,14 +319,14 @@ class _StepFirsteState extends State<StepFirste> {
                   onChanged: (value) => setState(() => this.value = value),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 7,
               ),
               Expanded(
                 child: TextFormField(
                   controller: _pincode,
                   decoration: textInputDecoration.copyWith(
-                    contentPadding: EdgeInsets.symmetric(vertical: 4),
+                    contentPadding: const EdgeInsets.symmetric(vertical: 4),
                     labelText: 'PinCode',
                   ),
                   inputFormatters: [
