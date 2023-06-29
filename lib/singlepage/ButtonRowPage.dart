@@ -73,8 +73,9 @@ class _ButtonRowPageState extends State<ButtonRowPage> {
             child: ElevatedButton(
               onPressed: () {
                 setState(() {
-                  proj.add(createRow(projind));
+                  proj.add(createRow(proj.length));
                   projind++;
+                  print(proj.length);
                 });
               },
               child: field('Add Project'),
@@ -92,8 +93,10 @@ class _ButtonRowPageState extends State<ButtonRowPage> {
             child: ElevatedButton(
               onPressed: () {
                 setState(() {
+                  print(interntow);
                   intern.add(createRo(interntow));
                   interntow++;
+                  print(interntow);
                 });
               },
               child: field('Add Internship'),
@@ -106,7 +109,7 @@ class _ButtonRowPageState extends State<ButtonRowPage> {
         ),
         ElevatedButton(onPressed: (){
           setState(() {
-            Navigator.pushReplacementNamed(context, '/workexp');
+            Navigator.pushNamed(context, '/workexp');
           });
         }, child: field('Switch'))
       ],
@@ -155,13 +158,15 @@ class _ButtonRowPageState extends State<ButtonRowPage> {
         ElevatedButton(
           onPressed: () {
             setState(() {
-              companyControllers.removeAt(Rower);
-              projTitleControllers.removeAt(Rower);
-              functControllers.removeAt(Rower);
-              indusControllers.removeAt(Rower);
-              desControllers.removeAt(Rower);
-              proj.removeAt(Rower);
+              companyControllers.removeAt(Rower-1);
+              projTitleControllers.removeAt(Rower-1);
+              functControllers.removeAt(Rower-1);
+              indusControllers.removeAt(Rower-1);
+              desControllers.removeAt(Rower-1);
+              proj.removeAt(Rower-1);
               print(Rower);
+              projind--;
+              print(proj.length);
             });
           },
           child: const Text('Delete'),
@@ -231,13 +236,15 @@ class _ButtonRowPageState extends State<ButtonRowPage> {
         ElevatedButton(
           onPressed: () {
             setState(() {
-              designationControllers.removeAt(Rowers);
-              companyNamesControllers.removeAt(Rowers);
-              functionControllers.removeAt(Rowers);
-              industryControllers.removeAt(Rowers);
-              descriptionControllers.removeAt(Rowers);
-              skillControllers.removeAt(Rowers);
-              intern.removeAt(Rowers);
+              designationControllers.removeAt(Rowers-1);
+              companyNamesControllers.removeAt(Rowers-1);
+              functionControllers.removeAt(Rowers-1);
+              industryControllers.removeAt(Rowers-1);
+              descriptionControllers.removeAt(Rowers-1);
+              skillControllers.removeAt(Rowers-1);
+              intern.removeAt(Rowers-1);
+              interntow--;
+              print(interntow);
             });
           },
           child: const Text('Delete'),

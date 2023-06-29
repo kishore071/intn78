@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-class MyParameters {
+class InitialRes {
   late String message;
   late int num;
   late String Gen;
   late String Last;
   late String regno;
-  MyParameters(
+  InitialRes(
       {required this.message,
       required this.num,
       required this.Gen,
@@ -13,7 +13,7 @@ class MyParameters {
       required this.regno});
 }
 
-class MyParams{
+class FinalRes{
   late String Caste;
   late String Religion;
   late String Hobbies;
@@ -21,7 +21,7 @@ class MyParams{
   late String Pre_job_loc;
   late String soc_med;
   late String Car_obj;
-  MyParams(
+  FinalRes(
   {
   required this.Caste,
   required this.Religion,
@@ -31,6 +31,19 @@ class MyParams{
   required this.soc_med,
   required this.Car_obj,
   });}
+
+class XdTest{
+  final String ?name;
+  final DateTime ?date;
+  XdTest({required this.name,required this.date});
+}
+
+//needed parametrs to be passed for uid and
+class Usersxd{
+  late final String uid;
+  Usersxd({required this.uid });
+}
+
 //End of Constructs
 
 //DropDowns

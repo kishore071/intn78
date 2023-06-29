@@ -109,7 +109,7 @@ class _SecondPageState extends State<SecondPage> {
                 ),
                 ElevatedButton(onPressed: (){
                   setState(() {
-                    Navigator.pushReplacementNamed(context, '/profdoc');
+                    Navigator.pushNamed(context, '/profdoc');
                   });
                 }, child: field('Switch'))
               ],)

@@ -5,21 +5,26 @@ import 'package:flutter/services.dart';
 import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
 
-//TextForm field Design
 
+
+
+
+//TextForm field Design
 const textInputDecoration=InputDecoration(
-  fillColor: Colors.white,
+  fillColor: Colors.transparent,
   filled: true,
   enabledBorder: OutlineInputBorder(
     borderSide: BorderSide(
         color: Colors.grey,width: 2.0),),
   focusedBorder: OutlineInputBorder
     (borderSide: BorderSide(
-      color: Colors.blue,width: 2.0)),
+      color: Colors.blueGrey,width: 2.0)),
 );
 
-//Text Calendar Design
 
+
+
+//Text Calendar Design
 const textcalendar=InputDecoration(
     icon: Icon(Icons.calendar_today),
   enabledBorder: OutlineInputBorder(
@@ -30,8 +35,11 @@ const textcalendar=InputDecoration(
       color: Colors.blue,width: 2.0)),
 );
 
+
 //EqualGap
-const Box=SizedBox(height: 30,);
+SizedBox Box(BuildContext context){
+  return SizedBox(height: MediaQuery.of(context).size.height * 0.02);
+}
 const Boxe=SizedBox(width: 110,);
 //TextCreator
 field(String vra){
@@ -40,6 +48,8 @@ field(String vra){
       fontWeight: FontWeight.w600,fontStyle: FontStyle.italic),);}
 
 FilteringTextInputFormatter format=FilteringTextInputFormatter.allow(RegExp(r'^[a-zA-Z .]+$'));
+
+
 
 //Error Display Texts
 const Text Errors = Text(
@@ -50,6 +60,8 @@ const Text Errors = Text(
 
 //TextFormField Control
 
+MaterialColor bgcolor=Colors.grey;
+Color bgcolors=Colors.grey.shade600;
 
 //File Picker Constants free....
 Future<File> saveFilePermanently(PlatformFile file) async {

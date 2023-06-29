@@ -47,7 +47,7 @@ class _FilesPivckersState extends State<FilesPivckers> {
               ),),
             ElevatedButton(onPressed: (){
               setState(() {
-                Navigator.pushReplacementNamed(context, '/adddetails');
+                Navigator.pushNamed(context, '/adddetails');
               });
             }, child: field('Switch'))
           ],

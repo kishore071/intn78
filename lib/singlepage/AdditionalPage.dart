@@ -35,7 +35,7 @@ class _AdditionalPageState extends State<AdditionalPage> {
             key: _formKey,
             child: Column(
               children: [
-                Box,
+                Box(context),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 5, 0,5),
                   child: DropdownButtonHideUnderline(
@@ -49,7 +49,7 @@ class _AdditionalPageState extends State<AdditionalPage> {
                             setState(()=>this.value=value)),
                   ),
                 ),
-                Box,
+                Box(context),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 5, 0,5),
                   child: DropdownButtonHideUnderline(
@@ -63,7 +63,7 @@ class _AdditionalPageState extends State<AdditionalPage> {
                               setState(()=>_value=value))
                   ),
                 ),
-                Box,
+                Box(context),
                 TextFormField(
                   decoration: textInputDecoration.copyWith(labelText: 'Hobbies (what do you like?)'),
                   validator: (value) {
@@ -76,7 +76,7 @@ class _AdditionalPageState extends State<AdditionalPage> {
                     _hobbies = value!;
                   },
                 ),
-                Box,
+                Box(context),
                 TextFormField(
                   decoration: textInputDecoration.copyWith(labelText: 'Languages'),
                   validator: (value) {
@@ -89,7 +89,7 @@ class _AdditionalPageState extends State<AdditionalPage> {
                     _lang = value!;
                   },
                 ),
-                Box,
+                Box(context),
                 TextFormField(
                   decoration: textInputDecoration.copyWith(labelText: 'Preffered Job Locations '),
                   validator: (value) {
@@ -102,7 +102,7 @@ class _AdditionalPageState extends State<AdditionalPage> {
                     _job = value!;
                   },
                 ),
-                Box,
+                Box(context),
                 TextFormField(
                   decoration: textInputDecoration.copyWith(labelText: 'Social Media'),
                   validator: (value) {
@@ -115,7 +115,7 @@ class _AdditionalPageState extends State<AdditionalPage> {
                     _social = value!;
                   },
                 ),
-                Box,
+                Box(context),
                 TextFormField(
                   decoration: textInputDecoration.copyWith(labelText: 'Carrier Objective '),
                   validator: (value) {
@@ -128,7 +128,7 @@ class _AdditionalPageState extends State<AdditionalPage> {
                     _carrier = value!;
                   },
                 ),
-                Box,
+                Box(context),
                 ElevatedButton(
                   child: field('Review & Save'),
                   onPressed: () {
@@ -137,7 +137,7 @@ class _AdditionalPageState extends State<AdditionalPage> {
                       // Perform any additional logic with the information
                       // For this example, we'll just print it
                       //print('Additional Information: $_information');
-                      MyParams abv= MyParams(
+                      FinalRes abv= FinalRes(
                           Caste:value.toString(),
                           Religion: _value.toString(),
                           Hobbies: _hobbies,
