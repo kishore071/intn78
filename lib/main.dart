@@ -10,6 +10,7 @@ import 'package:intern78/singlepage/First.dart';
 import 'package:intern78/singlepage/Second.dart';
 import 'package:provider/provider.dart';
 import 'Output/Intializer.dart';
+import 'Output/finalize.dart';
 import 'singlepage/ProjectAndIntern.dart';
 Future <void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (context) =>const Second(),
           '/test':(context)=>const Snapshots(),
+          // '/single':(context)=> Finalize(),
           '/laf': (context) =>const First(),
           '/edudeta':(context)=>const MyWidget(),
           '/projandint':(context)=>const ProjectAndIntern(),

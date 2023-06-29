@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 class InitialRes {
   late String message;
@@ -32,10 +33,27 @@ class FinalRes{
   required this.Car_obj,
   });}
 
-class XdTest{
-  final String ?name;
-  final DateTime ?date;
-  XdTest({required this.name,required this.date});
+
+class XdTest {
+  String? name;
+  DateTime? date;
+
+  XdTest({required this.name, required this.date});
+
+  factory XdTest.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> json) {
+    final data=json.data()!;
+    return XdTest(
+      name: data['name'],
+      date: DateTime.parse(data['birthday']),
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic>? data = new Map<String, dynamic>();
+    data!['name'] = name;
+    data!['date'] = date?.toIso8601String();
+    return data;
+  }
 }
 
 //needed parametrs to be passed for uid and

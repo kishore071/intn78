@@ -488,7 +488,7 @@ class _FirstState extends State<First> {
                 if(email.isNotEmpty){
                   setState(() async{
                   await database.InitialData(email);
-                  Navigator.pushNamed(context, '/test');});
+                  Navigator.pushNamed(context, '/edudeta');});
                 }});
             }, child: field('Switch'),style: ElevatedButton.styleFrom(
               foregroundColor: Colors.greenAccent,

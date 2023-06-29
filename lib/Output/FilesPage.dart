@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../Decorator/Constructors.dart';
@@ -14,8 +13,8 @@ class _ResultState extends State<Result> {
   Widget build(BuildContext context) {
     final InitalLoad=Provider.of<List<XdTest>?>(context);
     InitalLoad?.forEach((element) {
-      print(element?.name);
-      print(element?.date);
+      print(element.name);
+      print(element.date);
     });
     return Container();
   }
